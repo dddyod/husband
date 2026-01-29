@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>에티엔 드 나바르-발루아</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'royal-red': '#5e0a0a',
+              'blood-red': '#8a1c1c',
+              'ink': '#2a1b12',
+              'parchment-bg': '#f0e6d2',
+              'parchment-paper': '#e6dac3',
+              'gold-dark': '#8c7335',
+              'dark-paper': '#1a1614',
+              'ash-gray': '#a8a29e',
+            },
+            fontFamily: {
+              serif: ['"Nanum Myeongjo"', '"Playfair Display"', 'serif'],
+              script: ['"Great Vibes"', 'cursive'],
+              sans: ['"Pretendard"', 'sans-serif'],
+            },
+            backgroundImage: {
+              'paper-texture': "url('https://www.transparenttextures.com/patterns/aged-paper.png')",
+              'dark-texture': "url('https://www.transparenttextures.com/patterns/black-scales.png')",
+            },
+            animation: {
+              'burn-out': 'burnOut 3s forwards ease-in-out',
+              'fire-glow': 'fireGlow 2s infinite alternate',
+              'fade-in': 'fadeIn 1s ease-out forwards',
+              'bounce-slow': 'bounce 2s infinite',
+            },
+            keyframes: {
+              burnOut: {
+                '0%': { opacity: '1', filter: 'sepia(0) brightness(1)', transform: 'scale(1)' },
+                '20%': { filter: 'sepia(1) brightness(0.9) contrast(1.2)' },
+                '50%': { filter: 'sepia(1) hue-rotate(-30deg) brightness(0.6) contrast(2) blur(0.5px)', transform: 'scale(1.02)' },
+                '100%': { opacity: '0', filter: 'brightness(0) blur(8px) grayscale(1)', transform: 'scale(0.95) translateY(-10px)' },
+              },
+              fireGlow: {
+                '0%': { opacity: '0.3', boxShadow: 'inset 0 0 20px #ff4500' },
+                '100%': { opacity: '0.8', boxShadow: 'inset 0 0 60px #ff8c00' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Nanum Myeongjo', serif;
+        transition: background-color 2s ease;
+      }
+      
+      /* Global texture overlay */
+      .texture-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+        background-image: url("https://www.transparenttextures.com/patterns/aged-paper.png");
+        opacity: 0.5;
+        transition: opacity 2s ease, filter 2s ease;
+      }
+
+      /* Dark mode texture adjustments */
+      .dark .texture-overlay {
+        opacity: 0.3;
+        filter: invert(1) contrast(0.8);
+      }
+
+      /* Vignette */
+      .vignette-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at center, transparent 0%, rgba(42, 27, 18, 0.15) 100%);
+        pointer-events: none;
+        z-index: -1;
+        transition: background 2s ease;
+      }
+      
+      .dark .vignette-overlay {
+        background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+      }
+
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #e6dac3;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #8c7335;
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #2a1b12;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #5e0a0a;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
