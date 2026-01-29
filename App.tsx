@@ -10,7 +10,7 @@ const character: CharacterProfile = {
   fullName: 'Étienne de Navarre-Valois',
   age: 21,
   height: '187cm',
-  birthday: '4월 16일',
+  birthday: '1551년 4월 16일',
   personality: ['과묵함', '냉철함', '행동주의'],
   role: '발루아의 부군'
 };
@@ -104,7 +104,7 @@ const App: React.FC = () => {
       <audio 
         ref={audioRef} 
         loop 
-        src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_5502a35602.mp3" 
+        src="https://github.com/dddyod/U/raw/refs/heads/main/2.mp3" 
       />
 
       {/* Audio Controls - Styled Larger and Top Right */}
@@ -182,7 +182,7 @@ const App: React.FC = () => {
               <p>
                 <strong className="text-blood-red dark:text-red-500 font-bold text-xl block mb-2 border-b border-stone-300 dark:border-stone-700 pb-2 inline-block">1572년 프랑스, 격변의 순간.</strong></p>
               <p>
-                가문이 이단이라는 명목으로 몰살당했습니다. <br />
+                가문이 이단이라는 명목 하에 몰살당했습니다. <br />
                 학살을 지휘한 자는 다름 아닌<br /> 당신의 정략혼 상대, <span className="text-royal-red dark:text-red-400 font-bold">에티엔</span>입니다.
               </p>
               <p>
@@ -197,7 +197,7 @@ const App: React.FC = () => {
             <div className="relative h-[450px] bg-stone-200 dark:bg-stone-800 p-2 shadow-2xl rotate-1 hover:rotate-0 transition-transform duration-500">
                <div className="absolute inset-0 border border-stone-400 dark:border-stone-600 m-2 pointer-events-none z-20"></div>
                <img 
-                src="https://picsum.photos/id/1050/600/800" 
+                src="https://raw.githubusercontent.com/dddyod/U/refs/heads/main/9.jpeg" 
                 alt="Sword and Rose" 
                 className="w-full h-full object-cover filter sepia-[0.6] contrast-125 hover:sepia-0 transition-all duration-700" 
               />
@@ -227,7 +227,7 @@ const App: React.FC = () => {
           <div className="flex flex-col md:flex-row gap-10 items-stretch bg-white/40 dark:bg-black/40 p-1 shadow-lg mb-16 border border-stone-300/60 dark:border-stone-700/50 backdrop-blur-sm transition-colors duration-1000">
             <div className="w-full md:w-5/12 min-h-[400px] relative bg-stone-300 overflow-hidden group">
                <img 
-                src="https://picsum.photos/seed/etienne/600/900" 
+                src="https://raw.githubusercontent.com/dddyod/U/refs/heads/main/10.jpeg" 
                 alt="Étienne" 
                 className="w-full h-full object-cover filter grayscale contrast-125 sepia-[0.3] group-hover:grayscale-0 transition-all duration-700"
               />
@@ -276,7 +276,7 @@ const App: React.FC = () => {
           <div className="flex flex-col md:flex-row-reverse gap-8 items-center bg-white/40 dark:bg-black/40 p-6 shadow-md border border-stone-300/50 dark:border-stone-700/50 backdrop-blur-sm transition-colors duration-1000">
             <div className="w-full md:w-1/4 aspect-square relative bg-stone-300 overflow-hidden rounded-full border-4 border-stone-200 dark:border-stone-700 shadow-inner">
                <img 
-                src="https://picsum.photos/seed/henri/400/400" 
+                src="https://raw.githubusercontent.com/dddyod/U/refs/heads/main/3.jpeg" 
                 alt="Henri" 
                 className="w-full h-full object-cover filter sepia-[0.4]"
               />
@@ -423,11 +423,11 @@ const App: React.FC = () => {
               
               {/* Album Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-                {[1, 2, 3].map((i) => (
+                {[7, 8, 6].map((i) => (
                   <div key={i} className="bg-white dark:bg-stone-800 p-3 shadow-md rotate-1 hover:rotate-0 transition-all duration-300">
                     <div className="aspect-[3/4] bg-stone-200 overflow-hidden border border-stone-100 dark:border-stone-700 relative group">
                       <img 
-                        src={`https://picsum.photos/seed/memory${i}/400/600`} 
+                        src={`https://raw.githubusercontent.com/dddyod/U/refs/heads/main/${i}.jpeg`} 
                         alt={`Memory ${i}`}
                         className="w-full h-full object-cover filter sepia brightness-90 hover:sepia-0 transition-all duration-700"
                       />
